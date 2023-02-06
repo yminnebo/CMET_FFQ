@@ -1,0 +1,15 @@
+```{r}
+# Auto-generates your help files (/man) and NAMESPACE file:
+# delete any *.Rd or NAMESPACE files before running for the first time
+devtools::document()
+
+# Check the description with 
+pkgload::dev_help('FFQ.convert.dataframe')
+
+# Check your package
+devtools::check()
+
+
+?ggplot2::ggplot()
+```
+

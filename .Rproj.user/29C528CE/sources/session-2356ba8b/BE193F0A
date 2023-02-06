@@ -1,0 +1,26 @@
+{
+    "id": "BE193F0A",
+    "path": "/Projects2/Yorick/Rstudio_projects/FFQ_package2/CMET.FFQ/R/hello.R",
+    "project_path": "R/hello.R",
+    "type": "r_source",
+    "hash": "2809278794",
+    "contents": "",
+    "dirty": false,
+    "created": 1675689752518.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "22,0",
+        "scrollLine": "8"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1675691081,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1675691081253,
+    "read_only": false,
+    "read_only_alternatives": []
+}

@@ -16,19 +16,16 @@ tools::add_datalist
 
 
  questiondata <- read.csv2("data/Question_conversion.csv", fileEncoding="latin1", header = T, sep=",")
-
-transformationdatafruit <- read.csv2("data/Transformation_fruit.csv", fileEncoding="latin1", header = T, sep=";")
-    
-    transformationdataveg <- read.csv2("data/Transformation_vegetable.csv", fileEncoding="latin1", header = T, sep=";")
-    
-    transformationdatanut <- read.csv2("data/Transformation_nut.csv", fileEncoding="latin1", header = T, sep=";")
-    
-    transformationdatagrain <- read.csv2("data/Transformation_grain.csv", fileEncoding="latin1", header = T, sep=";")
-    
-datalist <- list(questiondata= questiondata, transformationdatafruit=transformationdatafruit,
-                 transformationdataveg=transformationdataveg, 
-                 transformationdatanut = transformationdatanut, 
-                 transformationdatagrain = transformationdatagrain)
+ 
+ transformationdatafruit <- read.csv2("data/Transformation_fruit.csv", fileEncoding="latin1", header = T, sep=";")
+ transformationdataveg <- read.csv2("data/Transformation_vegetable.csv", fileEncoding="latin1", header = T, sep=";")
+ transformationdatanut <- read.csv2("data/Transformation_nut.csv", fileEncoding="latin1", header = T, sep=";")
+ transformationdatagrain <- read.csv2("data/Transformation_grain.csv", fileEncoding="latin1", header = T, sep=";")
+ 
+ datalist <- list(questiondata= questiondata, transformationdatafruit=transformationdatafruit,
+                  transformationdataveg=transformationdataveg, 
+                  transformationdatanut = transformationdatanut, 
+                  transformationdatagrain = transformationdatagrain)
 
 #save to rda file
 save(datalist, file = "data/conversionlist.rda")    

@@ -21,7 +21,9 @@ FFQ.convert.dataframe <- function (dataframe, Object = "FFQ") {
   functdata <- as.data.frame(t(functdata))
 
   # Import question titles to convert FFQ questions
-  questiondata <- read.csv2("Question_conversion.csv", fileEncoding="latin1", header = T, sep=",")
+  # questiondata <- read.csv2("Question_conversion.csv", fileEncoding="latin1", header = T, sep=",")
+  questiondata <- datalist$questiondata
+
   # Combine questions with functional data
   functdata <- tibble::rownames_to_column(functdata, "codes.pt.")
   functdata <- cbind(Question_conversion = questiondata$Question_conversion,
@@ -33,7 +35,9 @@ FFQ.convert.dataframe <- function (dataframe, Object = "FFQ") {
                      Row = questiondata$Row,
                      Base_unit = questiondata$Base_unit,
                      functdata)
+
   row.names(functdata) <- questiondata$Question_conversion
+
   # Manually check if questions in functdata allign with questiondata
   manual_alignment_check <- subset.data.frame(functdata,
                                               select = c(codes.pt., Question_conversion,
@@ -48,14 +52,22 @@ FFQ.convert.dataframe <- function (dataframe, Object = "FFQ") {
                                          group.timing = "list", references = "list"))
 
     # Add fibre references to FFQ object
-    transformationdatafruit <- read.csv2("Transformation_fruit.csv", fileEncoding="latin1", header = T, sep=";")
+    transformationdatafruit <- datalist$transformationdatafruit
+    # transformationdatafruit <- read.csv2("Transformation_fruit.csv", fileEncoding="latin1", header = T, sep=";")
     transformationdatafruit <- subset.data.frame(transformationdatafruit, Group != 0)
-    transformationdataveg <- read.csv2("Transformation_vegetable.csv", fileEncoding="latin1", header = T, sep=";")
+
+    transformationdataveg <- datalist$transformationdataveg
+    # transformationdataveg <- read.csv2("Transformation_vegetable.csv", fileEncoding="latin1", header = T, sep=";")
     transformationdataveg <- subset.data.frame(transformationdataveg, Group != 0)
-    transformationdatanut <- read.csv2("Transformation_nut.csv", fileEncoding="latin1", header = T, sep=";")
+
+    transformationdatanut <- datalist$transformationdatanut
+    # transformationdatanut <- read.csv2("Transformation_nut.csv", fileEncoding="latin1", header = T, sep=";")
     transformationdatanut <- subset.data.frame(transformationdatanut, Group != 0)
-    transformationdatagrain <- read.csv2("Transformation_grain.csv", fileEncoding="latin1", header = T, sep=";")
+
+    transformationdatagrain <- datalist$transformationdatgrain
+    # transformationdatagrain <- read.csv2("Transformation_grain.csv", fileEncoding="latin1", header = T, sep=";")
     transformationdatagrain <- subset.data.frame(transformationdatagrain, average_weight != 0)
+
     referencelist <- list(fruit = transformationdatafruit, vegetable = transformationdataveg,
                           nut = transformationdatanut, grain = transformationdatagrain )
 

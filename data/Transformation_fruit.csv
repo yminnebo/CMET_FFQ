@@ -1,0 +1,41 @@
+﻿Fruits;Category;Subcategory;Group;Average_weight;Amount_of_fibre_g/100g;SDF_Hemicellulose;SDF_Pectin;ISD_Hemicellulose;ISD_Cellulose;ISD_Pectin;ISD_Lignin;RS1;RS2;RS3;Chitin;Fructan
+Apple/appel;Diet;Fruit;Apple;139,5;2,4;0;0,2;0,5;0,6;0,5;0,2;0;0;0;0;0
+pear/peer;Diet;Fruit;Pear;152;3,1;0;0,2;0,5;0,6;0,5;0,2;0;0;0;0;0
+raspberry/framboos;Diet;Fruit;Raspberry;4;6,5;0,1;0,3;0,3;0,4;0,2;0,5;0;0;0;0;0
+blackberry/ braambes;Diet;Fruit;Blackberry;4,9;5,3;0,1;0,3;0,3;0,4;0,2;0,5;0;0;0;0;0
+Strawberries/aardbeien;Diet;Fruit;Strawberry;14,1;2;0,1;0,3;0,3;0,4;0,2;0,5;0;0;0;0;0
+blood orange/bloedappelsien;Diet;Fruit;Blood_orange;95,2;3;0,2;0,4;0,4;0,4;0,5;0;0;0;0;0;0
+Orange/ appelsien;Diet;Fruit;Orange;95,2;2,4;0,2;0,4;0,4;0,4;0,5;0;0;0;0;0;0
+lime/lemoen;Diet;Fruit;Lime;30,2;2,8;0,2;0,4;0,4;0,4;0,5;0;0;0;0;0;0
+lemon/citroen;Diet;Fruit;Lemon;40,2;2,8;0,2;0,4;0,4;0,4;0,5;0;0;0;0;0;0
+Tangerine/mandarijn;Diet;Fruit;Tangerine;40,2;1,8;0,2;0,4;0,4;0,4;0,5;0;0;0;0;0;0
+Clemetine;Diet;Fruit;Clementine;40,2;1,7;0,2;0,4;0,4;0,4;0,5;0;0;0;0;0;0
+grapefruit/pompelmoes;Diet;Fruit;Grapefruit;147;1,1;0,2;0,4;0,4;0,4;0,5;0;0;0;0;0;0
+Pomegranate/granaatappel;Diet;Fruit;Pomegranate;200;4;0,2;0,4;0,4;0,4;0,5;0;0;0;0;0;0
+Kiwi fruit/kiwi;Diet;Fruit;Kiwi;63,75;3;0,2;0,4;0,4;0,4;0,5;0;0;0;0;0;0
+litchi/lychee;Diet;Fruit;Litchi;8,25;1,3;0,2;0,4;0,4;0,4;0,5;0;0;0;0;0;0
+Mango;Diet;Fruit;Mango;136;1,6;0,2;0,4;0,4;0,4;0,5;0;0;0;0;0;0
+Blueberries/blauwe bes;Diet;Fruit;Blueberry;1,96;2,4;0,1;0,2;0,7;0,4;0,4;0,9;0;0;0;0;0
+cranberry;Diet;Fruit;Cranberry;2;3,6;0,1;0,2;0,7;0,4;0,4;0,9;0;0;0;0;0
+Cherries/kersen;Diet;Fruit;Cherry;3,6;2,1;0,1;0,4;0,4;0,6;0,2;0,1;0;0;0;0;0,2
+Abricot/abrikoos;Diet;Fruit;Apricot;32,4;2;0,1;0,4;0,4;0,6;0,2;0,1;0;0;0;0;0,2
+Nectarine;Diet;Fruit;Nectarine;80,75;1,7;0,1;0,4;0,4;0,6;0,2;0,1;0;0;0;0;0,2
+peach/perzik;Diet;Fruit;Peach;112,5;1,5;0,1;0,4;0,4;0,6;0,2;0,1;0;0;0;0;0,2
+plum/pruim;Diet;Fruit;Plum;55;1,4;0,1;0,4;0,4;0,6;0,2;0,1;0;0;0;0;0,2
+honeydew melon/ honingmeloen;Diet;Fruit;Melon;405;0,8;0;0,1;0,1;0,3;0,2;0;0;0;0;0;0,2
+cantaloupe melon;Diet;Fruit;Melon;405;0,8;0;0,1;0,1;0,3;0,2;0;0;0;0;0;0,2
+Banana/banaan;Diet;Fruit;Banana;84,5;2,6;0,2;0,3;0,2;0,3;0,1;0,6;0;4;0;0;0,7
+Pineapple/ananas;Diet;Fruit;Pineapple;936;1,4;0,1;0;0,3;0,3;0;0;0;0;0;0;0
+Passion fruit/passievrucht;Diet;Fruit;Passion_fruit;7,8;10,4;0,1;0;0,3;0,3;0;0;0;0;0;0;0
+Carambola/sterfruit;Diet;Fruit;Carambola;155;2,8; ;0;0;0;0;0;0;0;0;0;0
+Grapes (red or green)/ druiven;Diet;Fruit;Grape;5,6;0,9;0;0,1;0,2;0,3;0,2;0,2;0;0;0;0;0
+coconut;Diet;Fruit;Coconut;300;9;0,3;0,1;5,2;0,8;0,2;0;0;0;0;0;0
+avocado;Diet;Fruit;Avocado;119;6,7;0,5;0,8;0,9;1,4;0,2;0,1;0;0;0;0;0
+Persimmons;Diet;Fruit;Persimmons;168;3,6; ;0;0;0;0;0;0;0;0;0;0
+Pomelo;Diet;Fruit;Pomelo;224,2;1,1;0,2;0,4;0,4;0,4;0,5;0;0;0;0;0;0
+Dried fruit;Diet;Fruit;Dried_fruits;10;1,5;0,1;0,2;0,3;0,5;0,2;0,1;0;0;0;0;0,1
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0

@@ -9,6 +9,7 @@
 
 
 FFQ.convert.dataframe <- function (dataframe, Object = "FFQ") {
+  datalist <- CMET.FFQ::datalist
   functdata <- dataframe
   if(ncol(functdata) > 1051) {functdata <- subset.data.frame(functdata, select = c(1:1051))}
   ## Remove blank rows

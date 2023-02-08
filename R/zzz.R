@@ -6,7 +6,7 @@
 
   packageStartupMessage("This is version ", packageVersion(pkgname), " of ", pkgname,
                         cat(crayon::yellow(c(
-                          "Loaded succesfully, thanks for using this package",
+                          "Loaded succesfully, thanks for using this package\n",
                           "                                     ','. '. ; : ,','\n",
                           "                                       '..'.,',..'\n",
                           "                                          ';.'  ,'\n",
@@ -19,5 +19,5 @@
                           "               '._YM                 .-': .' _.' _.'_.'\n",
                           "                '----'._____________.'_'._:_:_.-'--'\n",
                           "                             \n",
-                          "                          HAPPY WHALE IS HAPPY"))))
+                          "                          HAPPY WHALE IS HAPPY\n"))))
                         }

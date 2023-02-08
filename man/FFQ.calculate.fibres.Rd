@@ -4,12 +4,14 @@
 \alias{FFQ.calculate.fibres}
 \title{Calculate the fibre consumptions from all food groups}
 \usage{
-FFQ.calculate.fibres(FFQobject, ignore.groups = FALSE)
+FFQ.calculate.fibres(FFQobject, ignore.groups = FALSE, print.succes = FALSE)
 }
 \arguments{
 \item{FFQobject}{FFQ object with all FFQ data}
 
 \item{ignore.groups}{Check if FFQ food items are present in reference list. Default = FALSE.}
+
+\item{print.succes}{t}
 }
 \value{
 Calculate the fibre consumptions from all food groups out of the FFQ object.

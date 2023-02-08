@@ -7,7 +7,7 @@
 FFQ.convert.dataframe(
   dataframe,
   Object = "FFQ",
-  datalist = "internal",
+  datalist1 = "internal",
   datalist2 = datalist
 )
 }

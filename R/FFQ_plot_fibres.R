@@ -11,6 +11,8 @@
 
 FFQ.plot.fibregroups <- function (FFQobject){
   df_fibres <- data.frame(); plotlist <- list()
+
+  functdata_diet <- FFQobject@subsections$diet
   # for(i in c(1:ncol(subset.data.frame(functdata_diet, select = -c(1,2,3,4,5,6))))){
   i = 1
   df1 <- subset.data.frame(functdata_diet, select = c(1,2,3,4,5,6,6+i))

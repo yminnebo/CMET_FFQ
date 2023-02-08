@@ -9,6 +9,7 @@
 
 
 FFQ.convert.dataframe <- function (dataframe, Object = "FFQ") {
+  functdata <- dataframe
   if(ncol(functdata) > 1051) {functdata <- subset.data.frame(functdata, select = c(1:1051))}
   ## Remove blank rows
   functdata <- functdata[!with(functdata, is.na(Region)),]

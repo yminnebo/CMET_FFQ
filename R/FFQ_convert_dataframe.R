@@ -8,20 +8,12 @@
 #' FFQobject <- FFQ.convert.dataframe(FFQ_dataframe)
 
 
-FFQ.convert.dataframe <- function (dataframe, Object = "FFQ") {
-
-  functdata2 = new("FFQobject", functdata = NULL,
-                  subsections = list(general = NULL,
-                                     health = NULL,
-                                     diet = NULL,
-                                     timing = NULL),
-                  references = NULL)
+FFQ.convert.dataframe <- function (dataframe, Object = "FFQ", datalist = "internal", datalist2 = datalist) {
 
 
-
-
-  datalist <- CMET.FFQ::datalist
+  if(datalist == "internal"){datalist <- CMET.FFQ::datalist}else{datalist <- datalist}
   functdata <- dataframe
+
   if(ncol(functdata) > 1051) {functdata <- subset.data.frame(functdata, select = c(1:1051))}
   ## Remove blank rows
   functdata <- functdata[!with(functdata, is.na(Region)),]
@@ -60,9 +52,10 @@ FFQ.convert.dataframe <- function (dataframe, Object = "FFQ") {
 
     # functdata1 <- as.matrix(functdata)
     functdata1 <- functdata
-    setClass("FFQobject", representation(functdata = "data.frame", subsections= "list",
-                                         total.fibres.per.group = "list", fibres.per.item = "list",
-                                         group.timing = "list", references = "list"))
+
+    # setClass("FFQobject", representation(functdata = "data.frame", subsections= "list",
+    #                                      total.fibres.per.group = "list", fibres.per.item = "list",
+    #                                      group.timing = "list", references = "list"))
 
     # Add fibre references to FFQ object
     transformationdatafruit <- datalist$transformationdatafruit
@@ -85,22 +78,22 @@ FFQ.convert.dataframe <- function (dataframe, Object = "FFQ") {
                           nut = transformationdatanut, grain = transformationdatagrain )
 
 
-    functdata2@functdata <- functdata1
-    functdata2@subsections$general <- subset.data.frame(functdata, functdata$Category == "General")
-    functdata2@subsections$health <- subset.data.frame(functdata, functdata$Category == "Health")
-    functdata2@subsections$diet <- subset.data.frame(functdata, functdata$Category == "Diet")
-    functdata2@subsections$timing <- subset.data.frame(subset.data.frame(subset.data.frame(functdata,
-                                                functdata$Category == "Diet"), select = -c(4,5,6)),
-                                                                   subset.data.frame(functdata, functdata$Category == "Diet")$Subcategory == "Timing")
-    functdata2@references <- referencelist
+    # functdata2@functdata <- functdata1
+    # functdata2@subsections$general <- subset.data.frame(functdata, functdata$Category == "General")
+    # functdata2@subsections$health <- subset.data.frame(functdata, functdata$Category == "Health")
+    # functdata2@subsections$diet <- subset.data.frame(functdata, functdata$Category == "Diet")
+    # functdata2@subsections$timing <- subset.data.frame(subset.data.frame(subset.data.frame(functdata,
+    #                                             functdata$Category == "Diet"), select = -c(4,5,6)),
+    #                                                                subset.data.frame(functdata, functdata$Category == "Diet")$Subcategory == "Timing")
+    # functdata2@references <- referencelist
 
-    # functdata2 = new("FFQobject", functdata = functdata1,
-    #                 subsections = list(general = subset.data.frame(functdata, functdata$Category == "General"),
-    #                                    health = subset.data.frame(functdata, functdata$Category == "Health"),
-    #                                    diet = subset.data.frame(functdata, functdata$Category == "Diet"),
-    #                                    timing = subset.data.frame(subset.data.frame(subset.data.frame(functdata,
-    #                                                                                                   functdata$Category == "Diet"), select = -c(4,5,6)),
-    #                                                               subset.data.frame(functdata, functdata$Category == "Diet")$Subcategory == "Timing")), references = referencelist)
+    functdata2 = new("FFQobject", functdata = functdata1,
+                    subsections = list(general = subset.data.frame(functdata, functdata$Category == "General"),
+                                       health = subset.data.frame(functdata, functdata$Category == "Health"),
+                                       diet = subset.data.frame(functdata, functdata$Category == "Diet"),
+                                       timing = subset.data.frame(subset.data.frame(subset.data.frame(functdata,
+                                                                                                      functdata$Category == "Diet"), select = -c(4,5,6)),
+                                                                  subset.data.frame(functdata, functdata$Category == "Diet")$Subcategory == "Timing")), references = referencelist)
   }else{if(Object == "list"){
     functdata2 <- list(functdata = functdata, general = subset.data.frame(functdata, functdata$Category == "General"),
                       health = subset.data.frame(functdata, functdata$Category == "Health"),

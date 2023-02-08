@@ -8,10 +8,10 @@
 #' FFQobject <- FFQ.convert.dataframe(FFQ_dataframe)
 
 
-FFQ.convert.dataframe <- function (dataframe, Object = "FFQ", datalist = "internal", datalist2 = datalist) {
+FFQ.convert.dataframe <- function (dataframe, Object = "FFQ", datalist1 = "internal", datalist2 = datalist) {
 
 
-  if(datalist == "internal"){datalist <- CMET.FFQ::datalist}else{datalist <- datalist}
+  if(datalist1 == "internal"){datalist <- CMET.FFQ::datalist}else{datalist <- datalist2}
   functdata <- dataframe
 
   if(ncol(functdata) > 1051) {functdata <- subset.data.frame(functdata, select = c(1:1051))}
@@ -70,9 +70,9 @@ FFQ.convert.dataframe <- function (dataframe, Object = "FFQ", datalist = "intern
     # transformationdatanut <- read.csv2("Transformation_nut.csv", fileEncoding="latin1", header = T, sep=";")
     transformationdatanut <- subset.data.frame(transformationdatanut, Group != 0)
 
-    transformationdatagrain <- datalist$transformationdatgrain
+    transformationdatagrain <- datalist$transformationdatagrain
     # transformationdatagrain <- read.csv2("Transformation_grain.csv", fileEncoding="latin1", header = T, sep=";")
-    transformationdatagrain <- subset.data.frame(transformationdatagrain, average_weight != 0)
+    # transformationdatagrain <- subset.data.frame(transformationdatagrain, average_weight != 0)
 
     referencelist <- list(fruit = transformationdatafruit, vegetable = transformationdataveg,
                           nut = transformationdatanut, grain = transformationdatagrain )
@@ -88,19 +88,19 @@ FFQ.convert.dataframe <- function (dataframe, Object = "FFQ", datalist = "intern
     # functdata2@references <- referencelist
 
     functdata2 = new("FFQobject", functdata = functdata1,
-                    subsections = list(general = subset.data.frame(functdata, functdata$Category == "General"),
-                                       health = subset.data.frame(functdata, functdata$Category == "Health"),
-                                       diet = subset.data.frame(functdata, functdata$Category == "Diet"),
-                                       timing = subset.data.frame(subset.data.frame(subset.data.frame(functdata,
-                                                                                                      functdata$Category == "Diet"), select = -c(4,5,6)),
-                                                                  subset.data.frame(functdata, functdata$Category == "Diet")$Subcategory == "Timing")), references = referencelist)
+                     subsections = list(general = subset.data.frame(functdata, functdata$Category == "General"),
+                                        health = subset.data.frame(functdata, functdata$Category == "Health"),
+                                        diet = subset.data.frame(functdata, functdata$Category == "Diet"),
+                                        timing = subset.data.frame(subset.data.frame(subset.data.frame(functdata,
+                                                                                                       functdata$Category == "Diet"), select = -c(4,5,6)),
+                                                                   subset.data.frame(functdata, functdata$Category == "Diet")$Subcategory == "Timing")), references = referencelist)
   }else{if(Object == "list"){
     functdata2 <- list(functdata = functdata, general = subset.data.frame(functdata, functdata$Category == "General"),
-                      health = subset.data.frame(functdata, functdata$Category == "Health"),
-                      diet = subset.data.frame(functdata, functdata$Category == "Diet"),
-                      timing = subset.data.frame(subset.data.frame(subset.data.frame(functdata, functdata$Category == "Diet"),
-                                                                   select = -c(4,5,6)),
-                                                 subset.data.frame(functdata, functdata$Category == "Diet")$Subcategory == "Timing"))
+                       health = subset.data.frame(functdata, functdata$Category == "Health"),
+                       diet = subset.data.frame(functdata, functdata$Category == "Diet"),
+                       timing = subset.data.frame(subset.data.frame(subset.data.frame(functdata, functdata$Category == "Diet"),
+                                                                    select = -c(4,5,6)),
+                                                  subset.data.frame(functdata, functdata$Category == "Diet")$Subcategory == "Timing"))
   }else{stop("Object type is not defined")}}
   return(functdata2)
 }

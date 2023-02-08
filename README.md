@@ -1,13 +1,3 @@
-# This is CMETs own FFQ package, which converts FFQ results to a personalised SHIME protocol
+## This is CMETs own FFQ package, which converts FFQ results to a personalised SHIME protocol
 
-# Required Packages
-```{r}
-# You need the following packages
-library(dplyr)
-library(crayon)
-library(kableExtra)
-library(grid)
-library(gridExtra)
-library(ggpubr)
-library(tibble)
-```
+### For all information, check the following [link](github.ugent.be/yminnebo/CMET_FFQ) (If not UGent, request via CMET.FFQ@UGent.be)

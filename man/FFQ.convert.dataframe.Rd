@@ -4,7 +4,12 @@
 \alias{FFQ.convert.dataframe}
 \title{Convert data frame into FFQ object}
 \usage{
-FFQ.convert.dataframe(dataframe, Object = "FFQ")
+FFQ.convert.dataframe(
+  dataframe,
+  Object = "FFQ",
+  datalist = "internal",
+  datalist2 = datalist
+)
 }
 \arguments{
 \item{Object}{Transform .}

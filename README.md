@@ -4,7 +4,8 @@ Welcome to the food frequency questionnaire (FFQ) translation package developed 
 
 ## Reference
 If you were to use this package, please refer to the PhD of Yorick Minnebo: 
-Minnebo, Y. (2023). A microbial world of difference: from unravelling individualising gut microbial`characteristics to its applications in the development of novel <i>in vitro</i> research. PhD thesis, Ghent University, Belgium.
+
+<b>Minnebo, Y. </b> (2023). A microbial world of difference: from unravelling individualising gut microbial characteristics to its applications in the development of novel <i>in vitro</i> research. PhD thesis, Ghent University, Belgium.
 
 A peer reviewed article will be available soon!
 

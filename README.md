@@ -10,5 +10,5 @@ If you were to use this package, please refer to the PhD of Yorick Minnebo:
 A peer reviewed article will be available soon!
 
 
-## More information
-For all information, check the following [link](github.ugent.be/yminnebo/CMET_FFQ) (If not UGent, request via CMET.FFQ@UGent.be)
+## Wiki and more information
+For more information on how to use this package, check the wiki via the following [link](https://github.com/yminnebo/CMET_FFQ/wiki). If you need even more information, request via CMET.FFQ@UGent.be.

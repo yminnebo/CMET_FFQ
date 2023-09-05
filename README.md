@@ -11,4 +11,4 @@ A peer reviewed article will be available soon!
 
 
 ## Wiki and more information
-For more information on how to use this package, check the wiki via the following [link](https://github.com/yminnebo/CMET_FFQ/wiki). If you need even more information, request via CMET.FFQ@UGent.be and/or Doctor.Yorick@outlook.com.
+For more information on how to use this package, check the wiki via the following [link](https://github.com/yminnebo/CMET_FFQ/wiki). If you need even more information, request via the Issues page or CMET.FFQ@UGent.be.
